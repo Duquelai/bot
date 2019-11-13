@@ -58,7 +58,7 @@ const Bot = () => {
 
   setInterval(
     () => obterCategorias("").then(() => console.log("running...")),
-    300000
+    1800000
   );
 
   const speech = useSpeechRecognition();
