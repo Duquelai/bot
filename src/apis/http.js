@@ -1,7 +1,7 @@
 import { create } from "axios";
 
 const http = create({
-  baseURL: "http://localhost:5000/"
+  baseURL: "https://bot-eliot-backend.herokuapp.com/"
 });
 
 // retorna o atributo data da resposta
