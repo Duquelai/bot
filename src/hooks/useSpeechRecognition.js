@@ -137,9 +137,15 @@ export function useSpeechRecognition() {
     recognition.current.start();
   }
 
+  function stopListening() {
+    setListening(false);
+    recognition.current.stop();
+  }
+
   return {
     browserSupportsSpeechRecognition,
     transcript: state.transcript,
+    stopListening: stopListening,
     startListening: browserSupportsSpeechRecognition
       ? startListening
       : () => {},
