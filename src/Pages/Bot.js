@@ -56,6 +56,11 @@ const Bot = () => {
   const [play, setPlay] = useState(true);
   const [scroll, setScroll] = useState(true); // update scroll to push Chatbox view to end
 
+  setInterval(
+    () => obterCategorias("").then(() => console.log("running...")),
+    300000
+  );
+
   const speech = useSpeechRecognition();
 
   const handleFetch = frase => {
